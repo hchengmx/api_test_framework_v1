@@ -1,7 +1,12 @@
 import unittest
 from HTMLTestReportCN import HTMLTestRunner
+import os
 
-path = 'D:\\new-onedrive\\OneDrive - hqu.edu.cn(1)\\Workspace\\study-notes\\python-api-automation\\api_test_framework'
+# print(os.path.dirname(os.path.abspath(__file__)))
+# print(os.path.abspath(os.path.dirname(__file__)))
+# print(os.path.abspath(os.path.dirname(os.getcwd())))
+path = os.path.dirname(os.path.abspath(__file__))
+# path = 'D:\\new-onedrive\\OneDrive - hqu.edu.cn(1)\\Workspace\\study-notes\\python-api-automation\\api_test_framework'
 suite = unittest.defaultTestLoader.discover("./")
 suite = unittest.defaultTestLoader.discover(path, pattern='test_*.py')
 
